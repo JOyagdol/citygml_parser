@@ -1,7 +1,5 @@
 # CityGML Parser
 
-![CityGML](https://upload.wikimedia.org/wikipedia/commons/6/60/CityGML_logo.png)
-
 A **CityGML 3.0** parser for reading and writing CityGML files using Python.  
 This project utilizes **xsdata** for XML data parsing and serialization.
 
@@ -16,7 +14,7 @@ This project utilizes **xsdata** for XML data parsing and serialization.
 To install the required dependencies, run:
 
 ```bash
-pip install xsdata lxml
+pip install numpy xsdata lxml
 ```
 
 ---
@@ -31,7 +29,7 @@ from xsdata.formats.dataclass.parsers import XmlParser
 parser = XmlParser()
 
 # Parse CityGML file
-model = parser.parse("./sample_file/1_SimpleBuilding/CityGML_3.gml")
+model = parser.parse("./sample/CityGML_3.gml")
 
 # Print parsed model
 print(model)
