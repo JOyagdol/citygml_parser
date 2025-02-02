@@ -1,13 +1,11 @@
 # CityGML Parser
 
 A **CityGML 3.0** parser for reading, writing, and converting CityGML files into JSON using Python.  
-This project utilizes **xsdata** for XML data parsing and serialization.
 
 ## **🚀 Features**
 - Parse **CityGML 3.0** files into Python objects.
 - Modify CityGML objects and write back to XML format.
 - Convert **CityGML to JSON** for easier data processing and integration.
-- Supports integration with `xsdata` for schema-based XML handling.
 
 ---
 
@@ -15,7 +13,7 @@ This project utilizes **xsdata** for XML data parsing and serialization.
 To install the required dependencies, run:
 
 ```bash
-pip install xsdata lxml
+pip install numpy xsdata lxml
 ```
 
 ---
@@ -92,13 +90,6 @@ CityGML_Parser/
 
 ---
 
-## **💡 Dependencies**
-- **Python 3.8+**
-- [**xsdata**](https://xsdata.readthedocs.io/en/latest/) - XML data binding for Python.
-- [**lxml**](https://lxml.de/) - XML parsing library.
-
----
-
 ## **👤 Author**
 - **Name:** Taewook Kang  
 - **Email:** [laputa99999@gmail.com](mailto:laputa99999@gmail.com)
@@ -112,14 +103,5 @@ This project is licensed under the **MIT License**.
 
 ## **🙌 Acknowledgments**
 This project is inspired by **CityGML 3.0**, an OGC standard for 3D city modeling.
-
-For more information on **CityGML**, visit:  
 🔗 [https://www.ogc.org/standards/citygml](https://www.ogc.org/standards/citygml)
 
-
-### **🔹 Updates in This Version**
-✅ **Added JSON conversion support** using `citygml_json.py`.  
-✅ **CLI and Python API usage examples for JSON conversion**.  
-✅ **Included `citygml_json.py` in project structure**.
-
-This README is now **fully updated** to reflect all major features! 🚀 Let me know if you need any further refinements.
