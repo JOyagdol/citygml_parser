@@ -5,8 +5,8 @@ This project utilizes **xsdata** for XML data parsing and serialization.
 
 ## **🚀 Features**
 - Parse **CityGML 3.0** files into Python objects.
-- Modify CityGML objects and write back to XML format.
-- Supports integration with `xsdata` for schema-based XML handling.
+- Modify CityGML objects and write back to GML format.
+- Supports integration with `xsdata` for schema-based GML handling.
 
 ---
 
