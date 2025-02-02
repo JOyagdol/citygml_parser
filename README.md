@@ -1,12 +1,13 @@
 # CityGML Parser
 
-A **CityGML 3.0** parser for reading and writing CityGML files using Python.  
+A **CityGML 3.0** parser for reading, writing, and converting CityGML files into JSON using Python.  
 This project utilizes **xsdata** for XML data parsing and serialization.
 
 ## **🚀 Features**
 - Parse **CityGML 3.0** files into Python objects.
-- Modify CityGML objects and write back to GML format.
-- Supports integration with `xsdata` for schema-based GML handling.
+- Modify CityGML objects and write back to XML format.
+- Convert **CityGML to JSON** for easier data processing and integration.
+- Supports integration with `xsdata` for schema-based XML handling.
 
 ---
 
@@ -14,7 +15,7 @@ This project utilizes **xsdata** for XML data parsing and serialization.
 To install the required dependencies, run:
 
 ```bash
-pip install numpy xsdata lxml
+pip install xsdata lxml
 ```
 
 ---
@@ -29,7 +30,7 @@ from xsdata.formats.dataclass.parsers import XmlParser
 parser = XmlParser()
 
 # Parse CityGML file
-model = parser.parse("./sample/CityGML_3.gml")
+model = parser.parse("./sample_file/1_SimpleBuilding/CityGML_3.gml")
 
 # Print parsed model
 print(model)
@@ -58,12 +59,34 @@ with path.open("w") as fp:
 
 ---
 
+### **📍 3. Convert CityGML to JSON**
+You can convert CityGML files to JSON format using the included `citygml_json.py` script.
+
+#### **📌 Convert via Command Line**
+```bash
+python citygml_json.py --input_file ./sample_file/CityGML_3.gml --output_file ./CityGML_3.json
+```
+
+#### **📌 Convert using Python**
+```python
+from citygml_json import convert_citygml_to_json
+
+input_gml = "./sample_file/CityGML_3.gml"
+output_json = "./CityGML_3.json"
+
+convert_citygml_to_json(input_gml, output_json)
+print("CityGML successfully converted to JSON.")
+```
+
+---
+
 ## **📂 Project Structure**
 ```
 CityGML_Parser/
 │── citygml_parser/       # CityGML parsing module
 │── sample_file/          # Sample CityGML files
 │── citygml_parser_example.py  # Example script
+│── citygml_json.py       # CityGML to JSON conversion script
 │── README.md             # Project documentation
 ```
 
@@ -93,3 +116,10 @@ This project is inspired by **CityGML 3.0**, an OGC standard for 3D city modelin
 For more information on **CityGML**, visit:  
 🔗 [https://www.ogc.org/standards/citygml](https://www.ogc.org/standards/citygml)
 
+
+### **🔹 Updates in This Version**
+✅ **Added JSON conversion support** using `citygml_json.py`.  
+✅ **CLI and Python API usage examples for JSON conversion**.  
+✅ **Included `citygml_json.py` in project structure**.
+
+This README is now **fully updated** to reflect all major features! 🚀 Let me know if you need any further refinements.
