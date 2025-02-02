@@ -12,7 +12,7 @@ from xsdata.formats.dataclass.parsers import XmlParser
 
 # read CityGML file
 parser = XmlParser()
-model = parser.parse("./sample_file/1_SimpleBuilding/CityGML_3.gml")
+model = parser.parse("./sample/CityGML_3.gml")
 print(model)
 
 # write CityGML file
