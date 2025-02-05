@@ -111,3 +111,4 @@ This project is licensed under the **MIT License**.
 This project is inspired by **CityGML 3.0**, an OGC standard for 3D city modeling.
 - 🔗 [https://www.ogc.org/standards/citygml](https://www.ogc.org/standards/citygml)
 - 🔗 [https://github.com/tudelft3d/CityGML-schema-validation](https://github.com/tudelft3d/CityGML-schema-validation/tree/master)
+- 🔗 [CityGML2-to-CityGML3](https://github.com/tum-gis/citygml2-to-citygml3)
