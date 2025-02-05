@@ -8,7 +8,7 @@ Date:
     2025-01-02
 """
 import json
-from citygml_parser import *
+from citygml_parser3 import *
 from xsdata.formats.dataclass.parsers import XmlParser
 
 # read CityGML file

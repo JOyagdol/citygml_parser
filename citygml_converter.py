@@ -11,7 +11,7 @@ Reference:
 	https://xsdata.readthedocs.io/en/v23.8/api/reference/xsdata.formats.dataclass.parsers.config.ParserConfig.html
 """
 import json, argparse
-from citygml_parser import *
+from citygml_parser3 import *
 from xsdata.formats.dataclass.parsers import XmlParser
 from xsdata.formats.dataclass.context import XmlContext
 from xsdata.formats.dataclass.parsers.config import ParserConfig
