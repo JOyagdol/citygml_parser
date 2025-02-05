@@ -15,11 +15,16 @@ A **CityGML 3.0** parser for reading, writing, and converting CityGML files into
 - Fix name space problem
 ---
 
-## **📂 Installation**
+## **📂 Installation and usage**
 To install the required dependencies, run:
 
 ```bash
 pip install numpy xsdata lxml
+```
+Converter usage
+```bash
+python citygml_json --input ./sample/CityGML_3.gml --output ./CityGML_3.json
+python citygml_converter --input ./sample/CityGML_3.gml --output ./output.gml
 ```
 
 ---
@@ -27,7 +32,7 @@ pip install numpy xsdata lxml
 ## **📄 Usage**
 ### **📍 1. Read a CityGML File**
 ```python
-from citygml_parser import *
+from citygml_parser3 import *
 from xsdata.formats.dataclass.parsers import XmlParser
 
 # Initialize parser
