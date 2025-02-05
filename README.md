@@ -9,10 +9,10 @@ A **CityGML 3.0** parser for reading, writing, and converting CityGML files into
 ---
 <img src="https://github.com/mac999/citygml_parser/blob/main/doc/img1.PNG" height="300"></img>
 <img src="https://github.com/mac999/citygml_parser/blob/main/doc/img2.png" height="300"></img>
----
-## ** Plan **
+## Plan 
 - Support **CityGML 2.0**
 - Fix name space problem
+---
 
 ## **📂 Installation**
 To install the required dependencies, run:
