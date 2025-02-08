@@ -50,7 +50,54 @@ print(model)
 
 ---
 
-### **📍 2. Modify and Write CityGML File**
+### **📍 2. List CityGML buliding and surface information**
+```python
+city_objects = model.city_object_member
+
+for city_object in city_objects:
+	building = city_object.building
+
+	print(f'building id: {building.id}')
+	print(f'building name: {building.name}')
+
+	try:
+		for bound in building.boundary:
+			wall = bound.wall_surface
+			if wall:
+				print(f'wall id: {wall.id}')
+			roof = bound.roof_surface
+			if roof:
+				print(f'roof id: {roof.id}')
+			floor = bound.floor_surface
+			if floor:
+				print(f'floor id: {floor.id}')
+			ground = bound.ground_surface
+			if ground:
+				print(f'ground id: {ground.id}')
+			
+		if building.lod1_solid:
+			print(f'building lod1_solid')
+			for sf in building.lod2_solid.solid.exterior.shell.surface_member:
+				print(f'surface: {sf.href}')			
+		if building.lod2_solid:
+			print(f'building lod2_solid')
+			for sf in building.lod2_solid.solid.exterior.shell.surface_member:
+				print(f'surface: {sf.href}')
+		if building.lod3_solid:
+			print(f'building lod3_solid')
+			for sf in building.lod2_solid.solid.exterior.shell.surface_member:
+				print(f'surface: {sf.href}')
+		if building.lod4_solid:
+			print(f'building lod4_solid')
+			for sf in building.lod2_solid.solid.exterior.shell.surface_member:
+				print(f'surface: {sf.href}')
+	except Exception as e:
+		pass
+```
+
+---
+
+### **📍 3. Modify and Write CityGML File**
 ```python
 from xsdata.formats.dataclass.context import XmlContext
 from xsdata.formats.dataclass.serializers import XmlSerializer
@@ -71,7 +118,7 @@ with path.open("w") as fp:
 
 ---
 
-### **📍 3. Convert CityGML to JSON**
+### **📍 4. Convert CityGML to JSON**
 You can convert CityGML files to JSON format using the included `citygml_json.py` script.
 
 #### **📌 Convert via Command Line**
