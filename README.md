@@ -94,7 +94,7 @@ for city_object in city_objects:
 	except Exception as e:
 		pass
 ```
-<img src="https://github.com/mac999/citygml_parser/blob/main/doc/img7.PNG" width="300"></br>result</img></br>
+<img src="https://github.com/mac999/citygml_parser/blob/main/doc/img8.PNG" width="300"></br>result</img></br>
 
 ---
 
