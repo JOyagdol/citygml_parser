@@ -119,3 +119,4 @@ This project is inspired by **CityGML 3.0**, an OGC standard for 3D city modelin
 - 🔗 [https://www.ogc.org/standards/citygml](https://www.ogc.org/standards/citygml)
 - 🔗 [https://github.com/tudelft3d/CityGML-schema-validation](https://github.com/tudelft3d/CityGML-schema-validation/tree/master)
 - 🔗 [CityGML2-to-CityGML3](https://github.com/tum-gis/citygml2-to-citygml3)
+- 🔗 [ISO/TS 19166 BIM-GIS conceptual mapping](https://github.com/mac999/ISO19166-B2GM)
