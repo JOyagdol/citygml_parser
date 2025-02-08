@@ -1,6 +1,6 @@
 # CityGML Parser
 
-A **CityGML 3.0** parser for reading, writing, and converting CityGML files into JSON using Python. 
+A **CityGML 3.0** (Python version) parser for reading, writing, and converting CityGML files into JSON using Python. 
 
 ## **🚀 Features**
 - Parse **CityGML 3.0** files into Python objects. 
