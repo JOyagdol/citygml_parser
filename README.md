@@ -1,6 +1,6 @@
 # CityGML Parser
 
-A **CityGML 3.0** (Python version) parser for reading, writing, and converting CityGML files into JSON using Python. 
+**CityGML 3.0** (Python version) parser for reading, writing, and converting CityGML files into JSON using Python. Since there is no suitable, easy-to-use, Python-based CityGML 3.0 parser available, I developed this. In the future, this parser is planned to be used to physically implement [ISO/TS 19166 BIM-GIS conceptual mapping](https://github.com/mac999/ISO19166-B2GM).
 
 ## **🚀 Features**
 Version 0.1
