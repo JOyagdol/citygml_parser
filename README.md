@@ -8,12 +8,12 @@ Version 0.1
 - Modify CityGML objects and write back to XML format.
 - Convert **CityGML to JSON** for easier data processing and integration.
 ---
-<img src="https://github.com/mac999/citygml_parser/blob/main/doc/img1.PNG" height="250"></img>
-<img src="https://github.com/mac999/citygml_parser/blob/main/doc/img2.png" height="250"></br>house</img></br>
-<img src="https://github.com/mac999/citygml_parser/blob/main/doc/img3.png" width="650"></br>building</img></br>
-<img src="https://github.com/mac999/citygml_parser/blob/main/doc/img5.PNG" width="650"></br>building</img></br>
-<img src="https://github.com/mac999/citygml_parser/blob/main/doc/img4.PNG" width="650"></br>road</img></br>
-<img src="https://github.com/mac999/citygml_parser/blob/main/doc/img6.PNG" width="650"></br>difference between input and output citygml</img>
+<img src="https://github.com/mac999/citygml_parser/blob/main/docs/img1.PNG" height="250"></img>
+<img src="https://github.com/mac999/citygml_parser/blob/main/docs/img2.png" height="250"></br>house</img></br>
+<img src="https://github.com/mac999/citygml_parser/blob/main/docs/img3.png" width="650"></br>building</img></br>
+<img src="https://github.com/mac999/citygml_parser/blob/main/docs/img5.PNG" width="650"></br>building</img></br>
+<img src="https://github.com/mac999/citygml_parser/blob/main/docs/img4.PNG" width="650"></br>road</img></br>
+<img src="https://github.com/mac999/citygml_parser/blob/main/docs/img6.PNG" width="650"></br>difference between input and output citygml</img>
 ## Next Plan 
 - Support **CityGML 2.0**
 - Fix name space problem
@@ -95,7 +95,7 @@ for city_object in city_objects:
 	except Exception as e:
 		pass
 ```
-<img src="https://github.com/mac999/citygml_parser/blob/main/doc/img8.PNG" width="300"></br>result</img></br>
+<img src="https://github.com/mac999/citygml_parser/blob/main/docs/img8.PNG" width="300"></br>result</img></br>
 
 ---
 
