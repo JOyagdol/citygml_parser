@@ -23,7 +23,7 @@ Version 0.1
 To install the required dependencies, run:
 
 ```bash
-pip install numpy xsdata lxml
+pip install numpy xsdata lxml pdoc
 ```
 Converter usage
 ```bash
