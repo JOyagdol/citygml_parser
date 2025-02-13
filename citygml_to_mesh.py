@@ -12,7 +12,7 @@ Reference:
 """
 import json, argparse, os, logging, random
 import numpy as np, trimesh
-from shapely.geometry import Polygon, MultiPolygon
+from tqdm import tqdm
 from lxml import etree
 from citygml_parser3 import *
 from xsdata.formats.dataclass.parsers import XmlParser
@@ -63,7 +63,7 @@ def parse_citygml(input_file):
 			'id': 'boundary',
 			'surface': []
 		}
-		for bound in building.boundary:
+		for bound in tqdm(building.boundary):
 			bound_items = bound.__dict__.items()
 			for key, value in bound_items:
 				if value == None:
@@ -110,7 +110,7 @@ def parse_citygml(input_file):
 	mesh_list = []
 	for surface in obj_model['bound']['surface']:
 		for lod in surface['surface']:
-			for pos_list_vector in lod['surface']:
+			for pos_list_vector in tqdm(lod['surface']):
 				vertices = pos_list_vector
 				faces = [[i for i in range(len(vertices))]]
 				mesh = trimesh.Trimesh(vertices=vertices, faces=faces)
@@ -118,7 +118,7 @@ def parse_citygml(input_file):
 				mesh_list.append(mesh)
 	
 	for solid in obj_model['solid']:
-		for pos_list_vector in solid['surface']:
+		for pos_list_vector in tqdm(solid['surface']):
 			vertices = pos_list_vector
 			faces = [[i for i in range(len(vertices))]]
 			mesh = trimesh.Trimesh(vertices=vertices, faces=faces)
@@ -141,8 +141,8 @@ def convert_mesh(input_gml_fname, output_mesh_fname):
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description='CityGML example to convert to mesh.')
 	parser.add_argument('--input', type=str, default='./sample/ManhattanSmall.gml', help='Input CityGML file')
-	parser.add_argument('--output', type=str, default='./mesh/ManhattanSmall.glb', help='Output mesh file')
-	parser.add_argument('--show', type=int, default=1, help='Show mesh file. 0=No, 1=Yes')
+	parser.add_argument('--output', type=str, default='./mesh/ManhattanSmall.glb', help='Output mesh file. STL, binary PLY, ASCII OFF, OBJ, GLTF/GLB 2.0, COLLADA')
+	parser.add_argument('--show', type=int, default=0, help='Show mesh file. 0=No, 1=Yes')
 	args = parser.parse_args()
 
 	try:
