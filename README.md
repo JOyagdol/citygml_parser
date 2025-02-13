@@ -153,11 +153,14 @@ python citygml_mesh.py --input_file ./sample/ManhattanSmall.gml --output_file ./
 
 ## **📂 Project Structure**
 ```
-CityGML_Parser/
-│── citygml_parser/       # CityGML parsing module
-│── sample_file/          # Sample CityGML files
-│── citygml_parser_example.py  # Example script
-│── citygml_json.py       # CityGML to JSON conversion script
+citygml_parser/
+│── citygml_parser3/       # CityGML parsing module
+│── sample/                # Sample CityGML files
+│── docs/                  # manual
+│── citygml_parser_example.py  # Example 
+│── citygml_converter.py  # CityGML conversion 
+│── citygml_json.py       # CityGML to JSON conversion
+│── citygml_to_mesh.py    # CityGML to Mesh conversion 
 │── README.md             # Project documentation
 ```
 
