@@ -144,7 +144,7 @@ print("CityGML successfully converted to JSON.")
 ```
 
 ### **📍 5. Convert CityGML to MESH (under development) **
-You can convert CityGML to MESH format. It supports to building's boundary, lod solid which consists of polygon surface. 
+You can convert CityGML to MESH format. It supports building's boundary, lod solid which consists of polygon surface. 
 ```bash
 python citygml_mesh.py --input_file ./sample/ManhattanSmall.gml --output_file ./ManhattanSmall.glb
 ```
