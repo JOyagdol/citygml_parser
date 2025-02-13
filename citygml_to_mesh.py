@@ -56,14 +56,14 @@ def parse_citygml(input_file):
 		'bound': None,
 		'solid': []
 	}
-	for city_object in city_objects:
+	for city_object in tqdm(city_objects):
 		building = city_object.building
 
 		obj_bound = {
 			'id': 'boundary',
 			'surface': []
 		}
-		for bound in tqdm(building.boundary):
+		for bound in building.boundary:
 			bound_items = bound.__dict__.items()
 			for key, value in bound_items:
 				if value == None:
@@ -109,16 +109,16 @@ def parse_citygml(input_file):
 	# make mesh list from obj_model
 	mesh_list = []
 	for surface in obj_model['bound']['surface']:
-		for lod in surface['surface']:
-			for pos_list_vector in tqdm(lod['surface']):
+		for lod in tqdm(surface['surface']):
+			for pos_list_vector in lod['surface']:
 				vertices = pos_list_vector
 				faces = [[i for i in range(len(vertices))]]
 				mesh = trimesh.Trimesh(vertices=vertices, faces=faces)
 
 				mesh_list.append(mesh)
 	
-	for solid in obj_model['solid']:
-		for pos_list_vector in tqdm(solid['surface']):
+	for solid in tqdm(obj_model['solid']):
+		for pos_list_vector in solid['surface']:
 			vertices = pos_list_vector
 			faces = [[i for i in range(len(vertices))]]
 			mesh = trimesh.Trimesh(vertices=vertices, faces=faces)
