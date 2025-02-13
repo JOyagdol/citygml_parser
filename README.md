@@ -47,7 +47,7 @@ from xsdata.formats.dataclass.parsers import XmlParser
 parser = XmlParser()
 
 # Parse CityGML file
-model = parser.parse("./sample_file/1_SimpleBuilding/CityGML_3.gml")
+model = parser.parse("./sample/1_SimpleBuilding/CityGML_3.gml")
 
 # Print parsed model
 print(model)
@@ -129,18 +129,24 @@ You can convert CityGML files to JSON format using the included `citygml_json.py
 
 #### **📌 Convert via Command Line**
 ```bash
-python citygml_json.py --input_file ./sample_file/CityGML_3.gml --output_file ./CityGML_3.json
+python citygml_json.py --input_file ./sample/CityGML_3.gml --output_file ./CityGML_3.json
 ```
 
 #### **📌 Convert using Python**
 ```python
 from citygml_json import convert_citygml_to_json
 
-input_gml = "./sample_file/CityGML_3.gml"
+input_gml = "./sample/CityGML_3.gml"
 output_json = "./CityGML_3.json"
 
 convert_citygml_to_json(input_gml, output_json)
 print("CityGML successfully converted to JSON.")
+```
+
+### **📍 5. Convert CityGML to MESH (under development) **
+You can convert CityGML to MESH format. It supports to building's boundary, lod solid which consists of polygon surface. 
+```bash
+python citygml_mesh.py --input_file ./sample/ManhattanSmall.gml --output_file ./ManhattanSmall.glb
 ```
 
 ---
