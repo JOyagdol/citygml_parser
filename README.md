@@ -7,6 +7,7 @@ Version 0.1
 - Parse **CityGML 3.0** files into Python objects. 
 - Modify CityGML objects and write back to XML format.
 - Convert **CityGML to JSON** for easier data processing and integration.
+- Convert **CityGML to MESH** (under development).
 </br>[Download CityGML 3.0_parser class with members HTML document](https://raw.githubusercontent.com/mac999/citygml_parser/refs/heads/main/docs/citygml_parser3.html)
 ---
 <img src="https://github.com/mac999/citygml_parser/blob/main/docs/img1.PNG" height="250"></img>
@@ -18,7 +19,7 @@ Version 0.1
 <img src="https://github.com/mac999/citygml_parser/blob/main/docs/img11.PNG" width="320"></br>city</img></br>
 <img src="https://github.com/mac999/citygml_parser/blob/main/docs/img6.PNG" width="650"></br>difference between input and output citygml</img>
 ## Next Plan 
-- Support **CityGML 2.0**
+- Support **CityGML 2.0**. In addition, there is [citygml2 to citygml3 convertor](https://github.com/tum-gis/citygml2-to-citygml3). It's working.
 - Fix name space problem
 ---
 
@@ -26,7 +27,7 @@ Version 0.1
 To install the required dependencies, run:
 
 ```bash
-pip install numpy xsdata lxml pdoc
+pip install numpy xsdata lxml pdoc trimesh shapely
 ```
 Converter usage
 ```bash
