@@ -10,7 +10,7 @@ Date:
 Reference: 
 	https://trimesh.org/
 """
-import json, argparse, os, logging, random
+import json, argparse, os, logging, random, re
 import numpy as np, trimesh
 from tqdm import tqdm
 from lxml import etree
@@ -45,6 +45,12 @@ def parse_bound_lods(value, obj_surface):
 
 		obj_surface['surface'].append(obj_lod)
 
+def get_key_object(model, key_query):
+	dict_items = model.__dict__.items()
+	for k, v in dict_items:
+		if k == key_query:
+			return v 
+	return None
 
 def parse_citygml(input_file):
 	config = ParserConfig(load_dtd=True, process_xinclude=True, fail_on_unknown_properties = False, fail_on_unknown_attributes = False, fail_on_converter_warnings = True) 
@@ -57,7 +63,10 @@ def parse_citygml(input_file):
 		'solid': []
 	}
 	for city_object in tqdm(city_objects):
-		building = city_object.building
+		building = get_key_object(city_object, 'building')
+		if building == None:
+			print('No building object.')
+			continue
 
 		obj_bound = {
 			'id': 'boundary',
