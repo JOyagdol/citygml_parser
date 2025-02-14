@@ -148,6 +148,7 @@ You can convert CityGML to MESH format. It supports building's boundary, lod sol
 ```bash
 python citygml_mesh.py --input_file ./sample/ManhattanSmall.gml --output_file ./ManhattanSmall.glb
 ```
+<img src="https://github.com/mac999/citygml_parser/blob/main/docs/citygml_mesh2.gif" width="600"></img>
 
 ---
 
