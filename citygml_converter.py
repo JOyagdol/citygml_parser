@@ -33,10 +33,11 @@ def extract_namespace(input_file):
 
 def main():
 	parser = argparse.ArgumentParser(description='Convert CityGML file to JSON.')
+	# parser.add_argument('--input', type=str, default='../SMARTCITY_LAB.gml', help='Input CityGML file') # house
 	# parser.add_argument('--input', type=str, default='./sample/CityGML_3.gml', help='Input CityGML file') # house
 	# parser.add_argument('--input', type=str, default='./sample/JeffersonBuilding_CityGML3.0_LOD1_with_xAL3_CommonTypes.gml', help='Input CityGML file') # buliding
-	parser.add_argument('--input', type=str, default='./sample/FZK-Haus_CityGML3.0_LOD3_with_interior.gml', help='Input CityGML file') # buliding
-	# parser.add_argument('--input', type=str, default='./sample/Building_LOD4-EPSG25832_CityGML_v2.gml', help='Input CityGML file') # building. citygml 2.0. TBD
+	# parser.add_argument('--input', type=str, default='./sample/FZK-Haus_CityGML3.0_LOD3_with_interior.gml', help='Input CityGML file') # buliding
+	parser.add_argument('--input', type=str, default='./sample/Building_LOD4-EPSG25832_CityGML_v2.gml', help='Input CityGML file') # building. citygml 2.0. TBD
 	# parser.add_argument('--input', type=str, default='./sample/202011_HfT_Stuttgart_Campus_LoD1_city.gml', help='Input CityGML file') # city	
 	# parser.add_argument('--input', type=str, default='./sample/CityGML3.0_Transportation_from_OpenDRIVE.gml', help='Input CityGML file') # infra
 	parser.add_argument('--output', type=str, default='./output.gml', help='Output JSON file')
